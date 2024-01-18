@@ -40,7 +40,7 @@ function App() {
         setMatch(array);
       });
   }, []);
-  console.log(match);
+
   let players = new Map();
   if (match.length !== 0) {
     for (const { players_1, players_2, goals_T1, goals_T2 } of match) {

@@ -16,8 +16,11 @@ const FormPlayer = ({ playersArr }) => {
   };
   function handleSubmit(e) {
     e.preventDefault();
-    setPlayers(bag);
-    createPlayers();
+    if (bag.size != 0) {
+      setPlayers(bag);
+      createPlayers();
+    } else {
+    }
   }
 
   function createPlayers() {
@@ -34,9 +37,12 @@ const FormPlayer = ({ playersArr }) => {
   }
   function handleSubmit2(e) {
     e.preventDefault();
-    setJugadores(
-      playersArr.concat({ name: input, match: 0, goals: 0, score: 0 })
-    );
+    if (input) {
+      setJugadores(
+        playersArr.concat({ name: input, match: 0, goals: 0, score: 0 })
+      );
+    } else {
+    }
   }
 
   return (
@@ -58,7 +64,6 @@ const FormPlayer = ({ playersArr }) => {
               as="input"
               name="formulario"
               onChange={(e) => handleChange(e)}
-              placeholder="I wanna pla!"
               style={{
                 border: "none",
                 borderRadius: 0,
@@ -70,16 +75,6 @@ const FormPlayer = ({ playersArr }) => {
             <div className="container d-flex justify-content-center">
               <Link onClick={(e) => handleSubmit2(e)}>Add</Link>
             </div>
-
-            {/* <Button
-              className="btn btn-outline-"
-              style={{ color: "#121212" }}
-              as="input"
-              type="submit"
-              value="Add"
-              size="lg"
-              onClick={(e) => handleSubmit2(e)}
-            /> */}
           </Form.Group>
         </Form>
         <Form onSubmit={handleSubmit}>
