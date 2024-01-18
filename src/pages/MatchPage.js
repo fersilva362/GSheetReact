@@ -1,10 +1,11 @@
-import { useLocation } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Container, Button } from "react-bootstrap";
 import FixtureMatch from "../widget/fixture_card";
 
 export default function MatchPage({ playersArr }) {
   const location = useLocation();
   const newSearch = new URLSearchParams(location.search).getAll("players");
+  const navigate = useNavigate();
 
   const theyPlay = playersArr.filter((obj) => newSearch.includes(obj.name));
   const newPlayer = newSearch
@@ -41,7 +42,7 @@ export default function MatchPage({ playersArr }) {
       <Container
         style={{
           width: "580px",
-          height: "60px",
+          height: "160px",
         }}
       ></Container>
       <FixtureMatch
@@ -52,7 +53,16 @@ export default function MatchPage({ playersArr }) {
         goals_T2={null}
       />
 
-      {}
+      <div className="container-fluid d-flex justify-content-center mt-5">
+        <Button
+          className="btn p-3"
+          style={{ backgroundColor: "#8a1515", border: "#8a1515" }}
+          as="input"
+          type="submit"
+          value="Back to Fixture"
+          onClick={() => navigate("/")}
+        />
+      </div>
     </>
   );
 }

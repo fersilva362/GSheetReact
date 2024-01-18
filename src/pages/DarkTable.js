@@ -8,7 +8,7 @@ function DarkTable({ match }) {
       <Container
         style={{
           width: "580px",
-          height: "60px",
+          height: "80px",
         }}
       ></Container>
       {match.map(({ date, players_1, players_2, goals_T1, goals_T2 }, idx) => {

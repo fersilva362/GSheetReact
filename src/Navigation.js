@@ -6,19 +6,28 @@ function BasicExample() {
   return (
     <Navbar
       expand="lg"
-      style={{ backgroundColor: "#303030" }}
+      style={{ backgroundColor: "#303030", height: "70px" }}
       data-bs-theme="dark"
     >
       <Container>
-        <Navbar.Brand className="" href="/">
+        <Navbar.Brand style={{ fontSize: "25px" }} className="" href="/">
           FUTBOL ENTRE AMIGOS
         </Navbar.Brand>
         <Navbar.Toggle className="" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
           id="basic-navbar-nav "
-          style={{ justifyContent: "flex-end" }}
+          style={{
+            justifyContent: "flex-end",
+          }}
         >
-          <Nav className="link-light">
+          <Nav
+            className="link-light"
+            style={{
+              backgroundColor: "#303030",
+              width: "fit-content",
+              paddingInline: "30px",
+            }}
+          >
             <Nav.Link className="link-light" href="/">
               Match
             </Nav.Link>
@@ -26,7 +35,7 @@ function BasicExample() {
               Players
             </Nav.Link>
             <Nav.Link className="link-light" href="armar-equipo">
-              Hay equipo?
+              Squad builder
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -10,7 +10,7 @@ function Jugadores({ playersArr }) {
       <Container
         style={{
           width: "570px",
-          height: "60px",
+          height: "80px",
         }}
       ></Container>
       {playersArr.map(({ name, match, goals, score }, index) => {

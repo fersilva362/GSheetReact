@@ -16,7 +16,7 @@ const FormPlayer = ({ playersArr }) => {
   };
   function handleSubmit(e) {
     e.preventDefault();
-    if (bag.size != 0) {
+    if (bag.size !== 0) {
       setPlayers(bag);
       createPlayers();
     } else {
@@ -70,23 +70,28 @@ const FormPlayer = ({ playersArr }) => {
                 borderBottom: " 2px solid #2387d7",
                 backgroundColor: "#121212",
               }}
-              //rows={3}
             />
             <div className="container d-flex justify-content-center">
-              <Link onClick={(e) => handleSubmit2(e)}>Add</Link>
+              <Link
+                style={{ textDecoration: "none" }}
+                onClick={(e) => handleSubmit2(e)}
+              >
+                ADD
+              </Link>
             </div>
           </Form.Group>
         </Form>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} className="">
           <Table>
             <tbody>
               {(jugadores ?? playersArr).map((player, index) => {
                 return (
                   <tr key={index}>
                     <td
-                      className=" fw-bold p-3"
+                      className=" p-3"
                       style={{
                         borderBottom: "none",
+                        fontSize: "21px",
                         color: "white",
                         backgroundColor: "#121212",
                       }}
@@ -96,7 +101,7 @@ const FormPlayer = ({ playersArr }) => {
                     <td
                       className=" mt-1 p-3 text-end"
                       style={{
-                        fontSize: "22px",
+                        fontSize: "21px",
                         borderBottom: "none",
                         color: "red",
                         backgroundColor: "#121212",
@@ -116,10 +121,11 @@ const FormPlayer = ({ playersArr }) => {
           </Table>
           <div className="container-fluid d-flex justify-content-center">
             <Button
+              className="btn p-3"
               style={{ backgroundColor: "#8a1515", border: "#8a1515" }}
               as="input"
               type="submit"
-              value="Get Soccer Team"
+              value="Get Soccer Teams"
               onClick={(e) => handleSubmit(e)}
             />
           </div>
