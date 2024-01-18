@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import DarkTable from "./DarkTable";
-import Jugadores from "./jugadores";
+import DarkTable from "./pages/DarkTable";
+import Jugadores from "./pages/jugadores";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
-import FormPlayer from "./FormPlayers";
-import MatchPage from "./MatchPage";
+import FormPlayer from "./pages/FormPlayers";
+import MatchPage from "./pages/MatchPage";
 //
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";

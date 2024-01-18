@@ -73,7 +73,7 @@ const FixtureMatch = ({ date, players_1, players_2, goals_T1, goals_T2 }) => {
                 className="text-center text-white fw-bold "
                 style={{ paddingBottom: "12px", marginBottom: "0" }}
               >
-                {`${goals_T1} - ${goals_T2}`}
+                {goals_T1 && goals_T2 ? `${goals_T1} - ${goals_T2}` : "vs"}
               </p>
             </Container>
 

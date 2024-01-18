@@ -8,7 +8,7 @@ const PlayerScore = ({ name, match, score, index }) => {
       <Container
         fluid
         style={{
-          width: "570px",
+          width: "510px",
         }}
         className="p-0 m-0 "
       >
@@ -18,8 +18,6 @@ const PlayerScore = ({ name, match, score, index }) => {
             height: "75px",
             marginBottom: "10px",
             boxShadow: "1px 1px 3px rgb(230, 230, 230)",
-            borderTopLeftRadius: "50px",
-            borderBottomLeftRadius: "50px",
             background: "linear-gradient(45deg, black,black, #d21615)",
           }}
         >

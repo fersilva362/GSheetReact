@@ -1,6 +1,6 @@
 import { Container, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import PlayerScore from "./widget/players_score";
+import PlayerScore from "../widget/players_score";
 import { useNavigate } from "react-router-dom";
 
 function Jugadores({ playersArr }) {
@@ -24,8 +24,6 @@ function Jugadores({ playersArr }) {
           />
         );
       })}
-
-      {/* button */}
       <div className="container-fluid mt-5 d-flex justify-content-center">
         <Button
           onClick={() => navigate("/armar-equipo")}
@@ -37,33 +35,6 @@ function Jugadores({ playersArr }) {
       </div>
     </>
   );
-  {
-    /* <Table striped hover  >
-
-                <thead  >
-                    <tr style={{ backgroundColor: '#e495e4' }}>
-                        <th>Name</th>
-                        <th>Matches</th>
-                        <th>Rank</th>
-
-                    </tr>
-                </thead>
-                <tbody >
-                    {playersArr.map(({ name, match, goals, score }) => {
-
-                        return (
-
-                            <tr>
-                                <td>{name}</td>
-                                <td>{match}</td>
-                                <td>{goals}</td>
-                                <td>{score}</td>
-                            </tr>)
-                    })}
-
-                </tbody>
-            </Table> */
-  }
 }
 
 export default Jugadores;
