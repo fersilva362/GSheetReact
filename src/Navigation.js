@@ -11,7 +11,7 @@ function BasicExample() {
     >
       <Container>
         <Navbar.Brand style={{ fontSize: "25px" }} className="" href="/">
-          FUTBOL ENTRE AMIGOS
+          HayEquipo
         </Navbar.Brand>
         <Navbar.Toggle className="" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
