@@ -3,7 +3,7 @@ import { Form, Table, Button, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 
 const FormPlayer = ({ playersArr }) => {
-  const [players, setPlayers] = useState({});
+  const [_, setPlayers] = useState({});
   const [input, setInput] = useState("");
   const [jugadores, setJugadores] = useState();
 
